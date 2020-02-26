@@ -1,4 +1,5 @@
-<?php 
+<?php
+session_start(); 
 		function conexion(){
 			$servidor="localhost";
 			$usuario="root";

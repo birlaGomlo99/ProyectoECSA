@@ -11,7 +11,7 @@
 		<div class="col-sm-4"></div>
 		<div class="col-sm-4">
 			<div class="panel panel-danger">
-				<div class="panel panel-heading">Registro de usuario</div>
+				<div class="panel panel-heading"  style="text-align: center;">Registro de usuario</div>
 				<div class="panel panel-body">
 					<form id="frmRegistro">
 						<label>Nombre</label>
@@ -22,6 +22,8 @@
 					<input type="text" class="form-control input-sm" id="usuario" name="">
 					<label>Password</label>
 					<input type="text" class="form-control input-sm" id="password" name="">
+					<label></label>
+					<input type="hidden" class="form-control input-sm" id="rol" name="" value="2">
 					<p></p>
 					<span class="btn btn-primary" id="registrarNuevo">Registrar</span>
 					</form>
@@ -59,6 +61,7 @@
 					"&apellido=" + $('#apellido').val() +
 					"&usuario=" + $('#usuario').val() + 
 					"&password=" + $('#password').val();
+					"&rol=" + $('#rol').val();
 
 					$.ajax({
 						type:"POST",

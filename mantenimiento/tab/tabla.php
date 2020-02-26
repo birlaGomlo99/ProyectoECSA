@@ -1,5 +1,9 @@
-<?php 
+ <?php
+ session_start();
 
+ if(isset($_SESSION['user'])){
+  ?>
+<?php 
 require_once "../php/conexion.php";
 $conexion=conexion();
 
@@ -83,7 +87,13 @@ $conexion=conexion();
 </div>
 </div>
 </div>
-
+  <?php 
+}else {
+   // si no inicia sesion lo mandamos al login;
+  echo '<script>alert("Favor de acceder con sus credenciales :)")</script> ';
+  header("Location:../../loginecsa/index.php");
+}
+?>
 
 <script src="//cdn.datatables.net/plug-ins/1.10.20/i18n/Spanish.json"></script>
 <script type="text/javascript">

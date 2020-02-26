@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
 	require_once "conexion.php";
 	$conexion=conexion();
 	$n=$_POST['nombre'];
